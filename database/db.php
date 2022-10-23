@@ -1,9 +1,9 @@
 <?php
     // connection with the db server
-    $db_server_name = "db.cs.dal.ca";
-    $db_name = "mahindru";
-    $db_user_name = "mahindru";
-    $db_password = "TXDbJ8F55GrGpTpwrctcjhtPE";
+    $db_server_name = "";
+    $db_name = "";
+    $db_user_name = "";
+    $db_password = "";
 
     $conn = mysqli_connect($db_server_name,$db_user_name,$db_password,$db_name);
 
