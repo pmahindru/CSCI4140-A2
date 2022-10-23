@@ -1,6 +1,6 @@
 <?php
 
-// https://www.w3schools.com/php/php_oop_constructor.asp
+// PHP Oop - Constructor. PHP OOP Constructor. (n.d.). Retrieved October 22, 2022, from https://www.w3schools.com/php/php_oop_constructor.asp 
 class Parts022
 {
     //database connection

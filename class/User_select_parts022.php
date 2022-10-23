@@ -3,7 +3,7 @@
 include "Parts022.php";
 include "Clients022.php";
 
-// https://www.w3schools.com/php/php_oop_constructor.asp
+// PHP Oop - Constructor. PHP OOP Constructor. (n.d.). Retrieved October 22, 2022, from https://www.w3schools.com/php/php_oop_constructor.asp 
 class user_select_parts022
 {
     //database connection
@@ -48,17 +48,17 @@ class user_select_parts022
         return false;
     }
 
-   // delete in the user_select_parts022 table and also update the Parts quantity
+    // delete in the user_select_parts022 table and also update the Parts quantity
     public function subUserSelectParts022()
     { 
         $sql = "DELETE FROM user_select_parts022 WHERE clientID022 = '$this->clientID022' AND partNo022 = '$this->partNo022' AND user_count = '$this->user_count' ";
         if ($this->connection->query($sql) === TRUE) {
             $parts = new Parts022($this->connection);
-        // assign the part no and part quantity 
+            // assign the part no and part quantity 
             $parts->partNo022 = $this->partNo022;
             $updateQoh = $this->partQoh022 + 1;
             $parts->Qoh022 = $updateQoh;
-        // update the part
+            // update the part
             if($parts->updateParts022())
             {
                 return true;
@@ -89,12 +89,12 @@ class user_select_parts022
         return false;
     }
 
-   // get all with the client id what they select parts
+    // get all with the client id what they select parts
     public function getUserSelectPart022()
     {
         $sql = "SELECT * FROM " . $this->tableName . " WHERE clientID022 = '$this->clientID022' ";
         $res = mysqli_query($this->connection, $sql);
-    // adding all the data in the array
+        // adding all the data in the array
         $array = array();
         $index = 0;
         while($row = mysqli_fetch_assoc($res)){

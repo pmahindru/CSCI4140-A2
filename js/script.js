@@ -1,7 +1,7 @@
 //this is getting the page and then add classlist active 
 // so that i can change the background color of the current nav element and let the user know about the current page
 // refer to the given link
-// https://stackoverflow.com/questions/16611497/how-can-i-get-the-name-of-an-html-page-in-javascript
+// programmerprogrammer 4, Daniel ArandaDaniel Aranda 6, HugolpzHugolpz 16.4k2626 gold badges9292 silver badges184184 bronze badges, GIPSSTARGIPSSTAR 1, DarrenDarren 67.3k2424 gold badges134134 silver badges143143 bronze badges, EthanEthan 3, NaftaliNaftali 143k3939 gold badges240240 silver badges300300 bronze badges, Ali JamalAli Jamal 1, rebelzachrebelzach 2, Marco ConcasMarco Concas 1, Igor BeuermannIgor Beuermann 11311 silver badge99 bronze badges, &amp; DemnofocusDemnofocus 2166 bronze badges. (1960, August 1). How can I get the name of an HTML page in Javascript? Stack Overflow. Retrieved October 22, 2022, from https://stackoverflow.com/questions/16611497/how-can-i-get-the-name-of-an-html-page-in-javascript 
 if(window.location.href.split("/").pop() != "login.php")
 {
     if(window.location.href.split("/").pop() == "index.php"){
@@ -17,7 +17,7 @@ if(window.location.href.split("/").pop() != "login.php")
 
 // mobile version of the navigation
 // this is refer to my own website 
-// http://web.cs.dal.ca/~mahindru/
+// Pranav Mahindru. Pranav Mahinrdru. (n.d.). Retrieved October 22, 2022, from http://web.cs.dal.ca/~mahindru/ 
 function open_close_nav() 
 {
     var getelement = document.getElementById("shownav");
@@ -33,7 +33,7 @@ function open_close_nav()
 function add(part_id, part_quantity, clientID, count)
 {
     // ajax is refer to the given link 
-    // https://arts-factory.net/en/javascriptphp/
+    // Kezo. (2021, August 27). How to pass form data from javascript to PHP. WEB Creator's Room. Retrieved October 22, 2022, from https://arts-factory.net/en/javascriptphp/ 
     $.ajax({
         type: "POST",
         url: "PHP_URL/AddToUserSelectPart.php",
@@ -51,7 +51,7 @@ function add(part_id, part_quantity, clientID, count)
 function sub(part_id, part_quantity, clientID, count)
 {
     // ajax is refer to the given link 
-    // https://arts-factory.net/en/javascriptphp/
+    // Kezo. (2021, August 27). How to pass form data from javascript to PHP. WEB Creator's Room. Retrieved October 22, 2022, from https://arts-factory.net/en/javascriptphp/ 
     $.ajax({
         type: "POST",
         url: "PHP_URL/SubToUserSelectPart.php",
@@ -71,14 +71,14 @@ function checkout(total_count_parts, clientID)
     if(total_count_parts > 0)
     {
         // ajax is refer to the given link 
-        // https://arts-factory.net/en/javascriptphp/
+        // Kezo. (2021, August 27). How to pass form data from javascript to PHP. WEB Creator's Room. Retrieved October 22, 2022, from https://arts-factory.net/en/javascriptphp/ 
         $.ajax({
             type: "POST",
             url: "PHP_URL/Checkout.php",
             data: {clientID: clientID},
             success: function(data){
                 var obj = JSON.parse(data);
-                // https://sweetalert2.github.io/
+                // Login form. Login Form - SweetAlert2 example. (n.d.). Retrieved October 22, 2022, from https://sweetalert2.github.io/recipe-gallery/login-form.html 
                 Swal.fire({
                     title: "Do you want to Checkout",
                     html: obj.html_text,
@@ -124,7 +124,7 @@ function checkout(total_count_parts, clientID)
 function addClient()
 {
     // create form is refer to the given link
-    // https://sweetalert2.github.io/recipe-gallery/login-form.html
+    // Login form. Login Form - SweetAlert2 example. (n.d.). Retrieved October 22, 2022, from https://sweetalert2.github.io/recipe-gallery/login-form.html 
     Swal.fire({
         title: "Add Account",
         html: `
@@ -152,7 +152,7 @@ function addClient()
         }
     }).then((result) => {
         // ajax is refer to the given link 
-        // https://arts-factory.net/en/javascriptphp/
+        // Kezo. (2021, August 27). How to pass form data from javascript to PHP. WEB Creator's Room. Retrieved October 22, 2022, from https://arts-factory.net/en/javascriptphp/ 
         $.ajax({
             type: "POST",
             url: "PHP_URL/AddtoClient.php",

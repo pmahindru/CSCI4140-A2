@@ -2,7 +2,7 @@
 
 include "Lines022.php";
 
-// https://www.w3schools.com/php/php_oop_constructor.asp
+// PHP Oop - Constructor. PHP OOP Constructor. (n.d.). Retrieved October 22, 2022, from https://www.w3schools.com/php/php_oop_constructor.asp 
 class POs022
 {
     //database connection
@@ -19,7 +19,7 @@ class POs022
     // constructor
     public function __construct($database_connection)
     {
-    // to assign the database connection = $connection
+        // to assign the database connection = $connection
         $this->connection = $database_connection;
     }
 
@@ -27,7 +27,7 @@ class POs022
     {
         $sql = "SELECT * FROM " . $this->tableName . " WHERE clientID022 = '$this->clientID022' ";
         $res = mysqli_query($this->connection, $sql);
-    // adding all the data in the array
+        // adding all the data in the array
         $array = array();
         $index = 0;
         while($row = mysqli_fetch_assoc($res)){
@@ -41,7 +41,7 @@ class POs022
         return $json_object;
     }
 
-   // update parts quantity when user select the part
+    // update parts quantity when user select the part
     public function addToPOs022()
     {
         $sql = "INSERT INTO POs022(poNo022, clientID022, dateOfPO022, status022) VALUES (NULL,'$this->clientID022','$this->dateOfPO022','$this->status022')";
@@ -51,7 +51,7 @@ class POs022
             $lines->obj_array022 = $obj;
             $lines->POsNo022 = mysqli_insert_id($this->connection);
 
-        // update the Lines
+            // update the Lines
             if($lines->addToLines022())
             {
                 return true;
