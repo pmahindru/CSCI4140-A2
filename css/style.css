@@ -1,0 +1,330 @@
+/*
+this CSS is also refer from my own website
+http://web.cs.dal.ca/~mahindru/
+https://web.cs.dal.ca/~mahindru/shop/
+*/
+* {
+  scroll-behavior: smooth;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+/* login page */
+.login_page {
+  font-size: large;
+  max-width: 500px;
+  padding: 20px;
+  overflow: hidden;
+  margin: auto !important;
+}
+.style_form input {
+  font-size: 18px;
+  padding: 6px;
+  margin: 8px 0px !important;
+}
+.style_form button,
+.createAccountButton {
+  font-size: 18px;
+  padding: 10px;
+  margin: 8px 0px !important;
+  border: none;
+  color: rgb(106, 184, 244);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+}
+.style_login_table {
+  border: 1px solid black;
+  /* 
+        Border spacing and collapse is taken refer from the give link
+        W3Schools online HTML editor. W3Schools Online Web Tutorials. (n.d.). Retrieved October 13, 2022, from https://www.w3schools.com/cssref/tryit.asp?filename=trycss_border-spacing 
+    */
+  border-spacing: 10px;
+  border-collapse: separate;
+  float: left;
+  margin: 10px !important;
+  padding-left: 10px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  padding-right: 10px !important;
+}
+/* navigation */
+.active {
+  background-color: rgba(91, 91, 91, 0.966) !important;
+  color: rgb(106, 184, 244) !important;
+}
+.navigation {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  color: rgb(106, 184, 244);
+  height: 60px;
+  background-color: black;
+  z-index: 1000;
+  -webkit-text-fill-color: rgb(106, 184, 244);
+  -moz-text-fill-color: rgb(106, 184, 244);
+}
+.shop_name {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  font-size: 25px;
+  line-height: 60px;
+}
+.shop_name a,
+.shop_name a:visited {
+  color: rgb(106, 184, 244);
+  text-decoration: none;
+}
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 59px;
+  color: rgb(106, 184, 244);
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  color: black;
+  background-color: rgb(106, 184, 244);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 55px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 799px) {
+  .navigation {
+    -webkit-text-fill-color: rgb(106, 184, 244);
+    -moz-text-fill-color: rgb(106, 184, 244);
+  }
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    padding: 55px 0px 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px !important;
+    line-height: 20px;
+    background-color: black !important;
+  }
+  .navbar-toggle {
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+  /* making bars on the navigation for the mobile */
+  .navbar-toggle span,
+  .navbar-toggle span:before,
+  .navbar-toggle span:after {
+    display: block;
+    cursor: pointer;
+    border-radius: 2px;
+    height: 3px;
+    width: 30px;
+    background-color: rgb(106, 184, 244);
+    position: absolute;
+    content: "";
+  }
+  .navbar-toggle span:before {
+    top: -10px;
+  }
+  .navbar-toggle span:after {
+    bottom: -10px;
+  }
+}
+
+/* main card view item */
+main {
+  height: auto !important;
+  width: auto !important;
+  padding: 4rem 0;
+  overflow: hidden;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.card_algin {
+  float: left;
+  padding-left: 10px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  padding-right: 10px !important;
+}
+.card {
+  max-width: 400px;
+  text-align: center;
+}
+.price {
+  color: rgb(64, 64, 64);
+  font-size: 24px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+.card button:hover {
+  opacity: 0.6;
+  color: rgb(106, 184, 244);
+}
+.style_cart {
+  position: absolute;
+  float: right;
+  right: 0px;
+  top: 50px;
+  margin: 20px;
+}
+
+.style_cart span {
+  position: absolute;
+  background-color: rgb(106, 184, 244);
+  border-radius: 50%;
+  font-size: 18px;
+  left: -15px;
+  color: black;
+  top: -2px;
+  padding: 1px 6px;
+}
+
+/*responsive for the media query*/
+@media only screen and (max-width: 415px) {
+  .style_cart {
+    position: relative;
+    float: none !important;
+    right: -20px !important;
+    top: auto !important;
+    margin: auto !important;
+  }
+}
+
+/* account page style */
+.style_account_button,
+.style_cart button {
+  font-size: 18px;
+  padding: 10px;
+  margin: 8px 0px !important;
+  border: none;
+  color: rgb(106, 184, 244);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+}
+
+/* checkout box */
+.card_checkout {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: rgb(106, 184, 244);
+  margin: 5px !important;
+  padding: 5px !important;
+  border: 1px wheat dotted;
+}
+.checkout_img img {
+  margin-right: 10px !important;
+  float: left;
+}
+.checkout_button p button {
+  font-size: 18px;
+  padding: 5px;
+  margin: 8px 0px !important;
+  border: none;
+  color: rgb(106, 184, 244);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: inherit;
+  background-color: rgb(45, 45, 45);
+}
+.checkout_text h1,
+p {
+  padding: 10px !important;
+  font-size: 16px !important;
+}
+.checkout_total_price {
+  text-align: center;
+  padding: 10px !important;
+  font-size: 20px !important;
+  color: rgb(106, 184, 244);
+}
+
+/* status page */
+.style_status {
+  background-color: rgba(255, 238, 0, 0.822);
+}
+.style_lines {
+  display: inline-block;
+  margin: 20px;
+}
+.Status_page {
+  font-size: large;
+  max-width: 500px;
+  padding: 20px;
+  overflow: hidden;
+  margin: auto !important;
+}
+.style_form_Status_page input {
+  font-size: 18px;
+  padding: 6px;
+  margin: 8px 0px !important;
+}
+.style_form_Status_page button {
+  font-size: 18px;
+  padding: 10px;
+  margin: 8px 0px !important;
+  border: none;
+  color: rgb(106, 184, 244);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+}
+.style_lines {
+  border: 1px solid black;
+}
+article {
+  display: inline-block;
+  float: left;
+  padding: 5rem 0;
+  overflow: hidden;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+article p {
+  background-color: wheat;
+}
